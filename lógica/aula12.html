@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function pulaLinha(){
+            document.write( "<br>");
+        }
+        function titulo(frase){
+            document.write("<h1>" +  frase  + "</h1>");
+        }
+        function mostra(frase){
+            document.write("<p>" + frase +"</p>" );
+            document.write("***************************************************************************************************************************************************")
+        }
+       
+       
+        //A vidente
+        var nome = "Inara"
+        var quantidadeFilhos = 1
+        var cidade = "São Paulo"
+        var profissao = "Desenvolvedor Full Stack"
+        document.write("***************************************************************************************************************************************************")
+        titulo("A vidente prevê:");
+        mostra(nome + " terá "+ quantidadeFilhos+  " filho e viverá em  "+  cidade + " trabalhando como " + profissao);
+
+        // Ilha deserta 
+        var item1 = 'agua'
+        var item2 = 'barraca'
+        var item3 = 'cigarro'
+        titulo('O que você levaria para uma ilha deserta?')
+        mostra('Eu levaria para uma liha deserta: ' + item1 + ", " + item2 + " e " + item3 + ".")
+
+        //Que animal 
+        var animal = 'aguia'
+        titulo('Que animal você gostaria de ser?')
+        mostra("Num primeiro momento eu gotaria de ser uma " + animal)
+        animal = 'coruja'
+        mostra("Pensando melhor, gostaria de ser uma " + animal)
+    </script>
+    
+</body> 
+</html>
