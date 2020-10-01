@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inflaçao</title>
+</head>
+<body>
+    <script>
+
+        function inflação( prod, preco1, preco2, dataInicio, dataFim){
+            var inflaçãoAtual = preco2 - preco1;
+            var periodo = dataFim - dataInicio
+            var mediaDiaria = inflaçãoAtual/periodo
+            var inflacaoformatado = inflaçãoAtual.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL'})
+            var inflacaoDiaria = mediaDiaria.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL'})
+
+
+            document.write ("><p>A alta da inflação do <b>" + prod + "</b> em " + periodo +" dias é de " + inflacaoformatado + " com uma media de aumento diario de " + inflacaoDiaria +"</p></font> <br>")
+
+
+        }
+
+       var tomate = inflação("Tomate", 3.30 ,4.70, 24, 30)
+       var arroz =  inflação("Arroz", 2.99, 3.25, 24, 30 )
+      var cenoura =   inflação("Cenoura", 3.99, 4.25, 24, 30)
+
+
+        
+
+
+    </script>
+    
+</body>
+</html>
