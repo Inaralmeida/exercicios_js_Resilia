@@ -16,14 +16,18 @@
             var inflacaoDiaria = mediaDiaria.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL'})
 
 
-            document.write ("><p>A alta da inflação do <b>" + prod + "</b> em " + periodo +" dias é de " + inflacaoformatado + " com uma media de aumento diario de " + inflacaoDiaria +"</p></font> <br>")
+            document.write ("<p>A alta da inflação do <b>" + prod + "</b> em " + periodo +" dias é de " + inflacaoformatado + " com uma media de aumento diario de " + inflacaoDiaria +".</p></font> <br>")
 
-
+            return inflaçãoAtual
         }
-
        var tomate = inflação("Tomate", 3.30 ,4.70, 24, 30)
        var arroz =  inflação("Arroz", 2.99, 3.25, 24, 30 )
       var cenoura =   inflação("Cenoura", 3.99, 4.25, 24, 30)
+
+      var media = (tomate + arroz + cenoura) / 3
+      var mediaGeral = media.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL'})
+      document.write("O valor médio de aumento da inflação foi de " + mediaGeral)
+
 
 
         

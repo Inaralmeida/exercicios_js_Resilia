@@ -1,0 +1,32 @@
+<meta charset="UTF-8">
+<script>
+     function pulaLinha(){
+        document.write( "<br>");
+        }
+    function titulo(frase){
+        document.write("<h1>" +  frase  + "</h1>");
+    }
+    function mostra(frase){
+        document.write("<p>" + frase +".</p>" ); 
+    }
+    function calculoPizza(custo, valor, imposto){
+        var total = valor - custo - imposto
+        var lucro = total.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL'})
+        return lucro
+    }
+
+    var custo = prompt("Qual é o custo da pizza?")
+    var valor = prompt("Qual é o valor pelo qual a pizza é vendida?")
+    var imposto1 = Math.round(valor * (8.9 / 100))
+    var nome = prompt("Qual é o nome da pizza que está sendo vendida?")
+    var valor1 = valor.toLocaleString("pt-BR", { style: 'currency', currency: 'BRL'})
+    var imposto = imposto1.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL'})
+
+    var lucro = calculoPizza(custo, valor, imposto1) 
+
+    titulo('Pizza: ' + nome);
+    mostra('Preço: ' + valor1);
+    mostra('Lucro: ' + lucro);
+    mostra('Imposto: ' + imposto);
+
+</script>
