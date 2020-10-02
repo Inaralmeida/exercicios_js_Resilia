@@ -1,0 +1,17 @@
+<meta charset="UTF-8">
+<script>
+    function semaforo(cor){
+        if (cor == "Verde"){
+            return "pode passar!"
+        } if ( cor == 'Amarelo'){
+            return "melhor freiar"
+        } if (cor == "Vermelho"){
+            return "pare já!"
+        } else{
+            return 'Cor invalida, tente novamente'
+        }
+
+    } 
+    var cor = prompt("Escolha uma cor: Verde, Amarelo ou Vermelho")
+    document.write(semaforo(cor))
+</script>

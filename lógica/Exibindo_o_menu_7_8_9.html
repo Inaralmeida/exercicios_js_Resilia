@@ -1,0 +1,18 @@
+<meta charset="UTF-8">
+<script>
+    function escolhaBebida(opcao){
+        if (opcao == 1){
+            return "Refigerante - R$ 5,00"
+        }if (opcao == 2){
+            return "Suco - R$ 4,00"
+        }if (opcao == 3){
+            return "Agua - R$2,00"
+        }else{
+            return 'Opção invalida, tente novamente'
+        }
+        var numero = prompt( 'Menu Bebidas  1 - Refigerante   2 - Suco   3 - Agua  Qual será a opção desejada?')
+
+       document.write( escolhaBebida(numero))
+
+    }
+</script>

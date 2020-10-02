@@ -1,0 +1,21 @@
+<meta charset="UTF-8">
+<script>
+      function mostra(frase){
+            document.write("<p>" + frase +"</p>" );
+      }
+    function maiorIdade(dtNascimento, dtAtual){
+       var idade = dtAtual - dtNascimento
+       var faltam =  18 - idade
+       if (idade >= 18){
+           mostra("Você tem " + idade + " anos. Você já pode dirigir no Brasil.")
+       }else {
+           mostra('Você tem apenas ' + idade + " anos. Ainda faltam " + faltam + " anos para você tirar a sua carta.")
+       }
+    }
+    
+    var dtNascimento = prompt("Em que ano você nasceu?")
+    var dtAtual = prompt("Em que ano estamos?")
+
+    maiorIdade(dtNascimento, dtAtual)
+
+</script>
