@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr1 = [1, 2, 3];
+        var arr2 = [4, 4, 4];
+        function somaArray(arr){
+            var soma = 0
+            for ( var i = 0; i < arr.length; i++ )  {
+                soma += arr[i];
+                console.log(soma)
+            }
+            
+            return soma
+        }
+
+        document.write(somaArray(arr1) +somaArray(arr2) )
+        
+
+
+    </script>
+    
+</body>
+</html>

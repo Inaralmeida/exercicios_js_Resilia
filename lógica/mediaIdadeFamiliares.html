@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media de Idade dos Familares</title>
+</head>
+<body>
+    <script>
+        function pulalinha(){
+            document.write('<br>')
+            document.write('<br>')
+        }
+        function titulo(titulo){
+            document.write('<h1><font size=70; color="#4169e1" > '+ titulo +'</font></h1>')
+        }
+        function mostra(frase){
+            document.write('<p><font size=6> '+ frase +'</font></p>') 
+            /* document.write('<p><font size=6> FIM </font></p>') 
+            document.write() */
+        }
+        titulo("Media de idade dos familiares")
+        var totalFamiliares = parseInt(prompt("Quantidade de familiares?"))
+
+        var numero = 1
+        while(numero <= totalFamiliares){
+            var idade = parseInt(prompt(`Qual é a idade do ${numero}º familiar`));
+            mostra(`A idade do ${numero}º familiar é ${idade} anos`)
+            numero++;
+            var totalIdades = 0 
+            totalIdades += idade
+        }
+        var media = Math.trunc( totalIdades / totalFamiliares)
+        mostra(`A média de idade dos ${totalFamiliares} familiares é de  ${media} anos`)
+    </script>
+</body>
+</html>

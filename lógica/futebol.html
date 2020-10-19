@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futebol</title>
+</head>
+<body>
+    
+    <script>
+        //Funções
+        function pulalinha(){
+            document.write('<br>')
+            document.write('<br>')
+        }
+        function titulo(titulo){
+            document.write('<h1><font size=70; color="#4169e1" > '+ titulo +'</font></h1>')
+        }
+        function mostra(frase){
+            document.write('<p><font size=6> '+ frase +'</font></p>') 
+            document.write('<p><font size=6> FIM </font></p>') 
+            document.write()
+        }
+        //Variaveis
+        var vitorias = parseInt(prompt("Numero de vitórias: "))
+        var empates = parseInt(prompt("Numero de empates: "))
+        var pontos = (vitorias * 3) + empates;
+        var resultado = " "
+        
+        if (pontos > 28){
+            resultado= "Seu time está melhor do que o ano passado"
+        } else if(pontos < 28){
+            resultado = "Seu time está pior que o ano passado"
+        }else{
+            resultado = 'Seu time está igual ao ano passado'
+        }
+
+        titulo('Futebol')
+        mostra(`Seu time tem ${pontos} pontos. ${resultado}`)
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <header id="topo">
+        <h1>Elas no comando</h1>
+        <p>Juliete</p>
+        <div id="botao">
+            <button id="proximo" onclick="texto()">Proximo</button> 
+        </div>
+    </header>
+     
+    <form action="
+    ">
+    <input type="radio" name="opção" id="SIM">
+    </form>
+
+    <script>
+           function texto(){
+               var nome = document.querySelector("#topo p").textContent = ('Samantha')
+               var botao = document.querySelector("#botao")
+               botao.innerHTML =`<button id="proximo" onclick="proximo1()">Proximo</button>`
+           }
+           function proximo1(){
+               var nome = document.querySelector("#topo p").textContent = ('Mariane')
+               var botao = document.querySelector("#botao")
+               botao.innerHTML =`<input type="radio" name="escolha" id="sim">Sim    `
+           }
+
+
+    </script>
+    
+</body>
+</html>

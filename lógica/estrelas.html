@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrela</title>
+</head>
+<body>
+    <script>
+        function pulalinha(){
+            document.write('<br>')
+            document.write('<br>')
+        }
+        function titulo(titulo){
+            document.write('<h1><font size=70; color="#4169e1" > '+ titulo +'</font></h1>')
+        }
+        function mostra(frase){
+            document.write('<p><font size=6> '+ frase +'</font></p>') /* 
+            document.write('<p><font size=6> FIM </font></p>') 
+            document.write() */
+        }
+        
+        for (var linha = 1; linha <= 3; linha ++){
+            for(var coluna = 1; coluna <= 10; coluna++){
+                document.write("*")
+            }
+            pulalinha()
+        }
+
+    </script>
+    
+</body>
+</html>

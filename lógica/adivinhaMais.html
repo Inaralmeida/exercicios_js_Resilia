@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adivinha Mais</title>
+    <style>
+         #topo{
+            border: 1px solid black;
+            width: 400px;
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: auto;
+        }
+        h1{
+            margin-bottom: 50px;
+            text-align: center;
+            width: 370px;
+
+        }
+        input{
+            width: 370px;
+            height: 45px;
+            font-size: 25px;
+            border: 1px solid black;
+        }
+        button{
+            height: 50px;
+            font-size: 20px;
+            text-transform: uppercase;
+            display: inline-block;
+            margin: 15px 30%;
+            
+        }
+        main{
+            font-size: 30px;
+            color: green;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        main #respostaErrada{
+            color: red
+        }
+    </style>
+</head>
+<body>
+    <div id="topo">
+        <h1>Adivinha o que número eu pensei!</h1>
+        <input />
+        <button>Advinhar</button>
+        <main id="respostaCerta">
+            <div id="respostaErrada">
+
+            </div>
+        </main>
+    </div>
+    <script>        
+        function sorteia(){
+            return Math.trunc(Math.random() * 10)
+        }
+
+        function verifica(){
+            for (var posicao = 0; posicao < segredos.length; posicao++){
+                if (input.value == segredos[posicao]){
+                    
+                    var para = document.createElement("p");
+                    var node = document.createTextNode("Você acertou!")
+                    para.appendChild(node)
+                    var element = document.getElementById("respostaCerta")
+                    element.appendChild(para)
+
+                    achou = true
+                    break
+                } 
+                
+            }
+            if (achou == false){
+                var para = document.createElement("p");
+                    var node = document.createTextNode("Você errou!")
+                    para.appendChild(node)
+                    var element = document.getElementById("respostaErrada")
+                    element.appendChild(para)
+            }
+        }
+   
+        function sorteiaNumero(quantidade){
+            var segredos =[]
+            var contador = 1
+            while (contador <= quantidade){
+                
+                var numeroAleatorio = sorteia()
+                
+                if(numeroAleatorio !== 0 ){
+                    var achou = false
+                    
+                    for(var posicao = 0; posicao < segredos.length; posicao++){
+                        
+                        if(segredos[posicao] == numeroAleatorio){
+                            
+                            achou = true
+                            break
+                            
+                        }
+                        
+                    }
+                    
+                    if(achou == false){ 
+                        
+                        segredos.push(numeroAleatorio)
+                        contador++
+                        
+                    }
+                }
+            }
+            
+            return segredos
+        }
+
+
+        var segredos = sorteiaNumero(2)
+        console.log(segredos)
+        
+        var input = document.querySelector("input");
+        input.value
+        var button = document.querySelector("button")
+        button.onclick = verifica;
+        
+        var achou = false
+        
+    </script>
+    
+</body>
+</html>

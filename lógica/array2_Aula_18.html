@@ -1,0 +1,19 @@
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
+<script>
+    var lista3e5 = [];
+    var soma = 0
+    
+    function contador(final){
+        for(var i = 0; i < final; i++)
+            if (i % 3 == 0 || i % 5 == 0){
+                lista3e5.push(i)    
+                soma += i
+            }
+            console.log(`A som dos valores divisiveis por 3 e 5 abaixo de ${final}(${lista3e5}) é ${soma}`)
+
+    }
+    
+    contador(15)
+    console.log(lista3e5)
+</script>

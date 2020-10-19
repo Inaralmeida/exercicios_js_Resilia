@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        main{
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 25px;
+            border: 1px solid black;
+            width: 450px;
+            padding: 15px;
+            text-align: center;
+        }
+        input{
+            width: 370px;
+            height: 45px;
+            font-size: 25px;
+            border: 1px solid black;
+        }
+        button{
+            height: 50px;
+            font-size: 20px;
+            text-transform: uppercase;
+            display: inline-block;
+            margin: 15px 30%;
+            
+        }
+
+    </style>
+</head>
+<body>
+<!--
+    
+    para CIFRAR
+    function cifraComCifraDeCesar( deslocamento, mensagem )
+{
+var mensagemEncriptada = "";
+// Código aqui
+return mensagemEncriptada;
+
+
+Para decifrar a mensagem:
+function decifraCifraDeCesar( deslocamento, mensagemCifrada )
+{
+var mensagemDecifrada = "";
+// Código aqui
+return mensagemDecifrada;
+}
+}-->
+    
+    </main>
+    
+    <script>
+      
+        var nome1 = prompt('Teu nome aqui!')
+        var letraArr =[]
+        var codigoArr = []
+        var cifraArr = []
+        var deslocamentoArr = []
+
+        function cifraComCifraDeCesar(nome1){
+
+
+            
+            for (var posicao = 0; posicao < nome1.length; posicao++){
+                var letra = nome1[posicao]//["i"]
+                letraArr.push(letra)// letraArr["i"]
+                var codigo = letra.charCodeAt(letra)// i= tabela ascii => 105
+                codigoArr.push(codigo) //codigoArr ['105']
+                var deslocamento =  codigo + 1// 105 + 1 = 106
+                if(deslocamento >=90){
+                    deslocamento = (deslocamento -= 26)
+                }
+                deslocamentoArr.push(deslocamento)// doslocamentoArr ["106",]
+                var cifra = String.fromCharCode(deslocamento)// 106 = transforma em letra = J
+                cifraArr.push(cifra)// cifraArr ['j']
+                return `${letra} = ${codigo} + ${deslocamento} = ${cifra}`
+
+            }
+        }    
+
+        document.write( cifraComCifraDeCesar(nome1))
+    </script>
+    
+</body>
+</html>

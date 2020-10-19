@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var string = ['5, 7 ,-1 , 1, 3'].split(" ")
+        var int = parseInt(string)
+        var array = [5, 7, -1, 1, 3]
+        var maior = 0
+
+
+      function maiorEMenorNumeros (numero){
+          for(var posicao = 0; posicao < numero.length; posicao++){
+              if(numero[posicao] > maior){
+                  maior = numero[posicao]
+              }
+          }
+          var menor = maior
+          for(var posicao = 0; posicao < numero.length; posicao++){
+              if(numero[posicao] < menor){
+                  menor = numero[posicao]
+              }
+          }
+          console.log(maior)
+          console.log(menor)
+      }
+      maiorEMenorNumeros(array)
+      console.log(int)
+
+    </script>
+</body>
+</html>

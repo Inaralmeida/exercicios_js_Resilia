@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        main{
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 25px;
+            border: 1px solid black;
+            width: 450px;
+            padding: 15px;
+            text-align: center;
+        }
+        input{
+            width: 370px;
+            height: 45px;
+            font-size: 25px;
+            border: 1px solid black;
+        }
+        button{
+            height: 50px;
+            font-size: 20px;
+            text-transform: uppercase;
+            display: inline-block;
+            margin: 15px 30%;
+            
+        }
+
+    </style>
+</head>
+<body>
+<!--
+    
+    para CIFRAR
+    function cifraComCifraDeCesar( deslocamento, mensagem )
+{
+var mensagemEncriptada = "";
+// Código aqui
+return mensagemEncriptada;
+
+
+Para decifrar a mensagem:
+function decifraCifraDeCesar( deslocamento, mensagemCifrada )
+{
+var mensagemDecifrada = "";
+// Código aqui
+return mensagemDecifrada;
+}
+}-->
+    <main>
+        <h1>TABELA DE ASCII</h1>
+        <p> Digite o seu nome e analise como seria de acordo com a tabela de ASCII </p>
+        <div>
+            <input type="text">
+            <button onclick='cifraComCifraDeCesar()'>Analisar</button>
+        </div>
+        <p id='resultado'></p>
+    </main>
+    
+    <script>
+      
+
+        function cifraComCifraDeCesar(){
+            var nome = document.querySelector("input");
+            var nome1 = nome.value
+            var main = document.getElementById("resultado");
+            var letraArr =[]
+            var codigoArr = []
+            var cifraArr = []
+            var deslocamentoArr = []
+            
+            for (var posicao = 0; posicao < nome1.length; posicao++){
+                var letra = nome1[posicao]//["i"] 
+                letraArr.push(nome1[posicao])// letraArr["i"]
+                var codigo = letra.charCodeAt(letra)// i= tabela ascii => 105
+                codigoArr.push(codigo) //codigoArr ['105']
+                var deslocamento =  codigo + 1// 105 + 1 = 106
+                if(deslocamento >=90){
+                    deslocamento = (deslocamento -= 26)
+                }
+              
+                deslocamentoArr.push(deslocamento)// doslocamentoArr ["106",]
+                var cifra = String.fromCharCode(deslocamento)// 106 = transforma em letra = J
+                cifraArr.push(cifra)// cifraArr ['j']
+                console.log(`${letra} : ${codigo} = ${deslocamento}: ${cifra}`)
+
+            }
+            return main.innerHTML = `<br> <p>
+                                            Seu nome atual: <strong>${letraArr}</strong><br> 
+                                            Seu ASCII atual:  <strong>${codigoArr}</strong><br>
+                                            Seu novo ASCII: <strong>${deslocamentoArr}</strong><br>
+                                            Sua cifra de César: <strong>${cifraArr}</strong>
+                                            <br></p>`;
+        }
+
+        
+
+    </script>
+    
+</body>
+</html>

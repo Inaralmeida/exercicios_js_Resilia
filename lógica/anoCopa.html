@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ano Copa</title>
+</head>
+<body>
+    <script>
+         function pulalinha(){
+            document.write('<br>')
+            document.write('<br>')
+        }
+        function titulo(titulo){
+            document.write('<h1><font size=70; color="#4169e1" > '+ titulo +'</font></h1>')
+        }
+        function mostra(frase){
+            document.write('<p><font size=6> '+ frase +'</font></p>') 
+            /* document.write('<p><font size=6> FIM </font></p>') 
+            document.write() */
+        }
+        
+        var anoCopa = parseInt(prompt('Defina a data inicial '))
+        var limite = parseInt(prompt('Defina a data limite'))
+        while (anoCopa <= limite){
+             mostra(`Teve copa em ${anoCopa}`);
+             anoCopa += 4
+         }
+         mostra('Fim')
+    </script>
+</body>
+</html>

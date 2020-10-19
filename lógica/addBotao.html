@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #000;
+        }
+        main{
+            border: 1px solid black;
+            border-radius: 25px;
+            background-color: #ffb200;
+            width: 680px;
+            margin: 50px auto;
+            text-align: center;
+        }
+        button{
+            width: 150px;
+            height: 50px;
+            font-size: 20px ;
+            background: black;
+            color:  #ffb200;
+            border: none;
+            border-radius: 25px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    
+    <main>
+        <button id="botao" onclick="criaBotao()">Criar Botões</button>
+    </main>
+    
+    <script>
+        
+        function criaBotao(){
+            var quantidadeBotao = 20
+            for(var contador = 0; contador < quantidadeBotao; contador++){
+                
+                var main = document.querySelector('main')
+                var botao = document.createElement('button')
+                botao.innerText = `Botão ${[contador]}`
+                main.appendChild(botao)
+
+            }
+            
+        }
+        
+    </script>
+</body>
+
+</html>

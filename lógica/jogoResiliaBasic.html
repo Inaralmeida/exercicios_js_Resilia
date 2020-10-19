@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resilia Game</title>
+
+</head>
+<body>
+    
+    <script>
+        var pontos = 100
+        var perguntas = 0
+        var media = pontos / perguntas
+        function titulo(titulo){
+             alert(titulo)
+        }
+        function texto(frase){
+            alert(frase)
+        }
+        function pergunta (texto, pontuacao){
+            resposta = false
+            while(resposta == false){
+                var pergunta = prompt(texto + " Responda com  S ou N")
+                console.log(pergunta)
+                if(pergunta === 'S' ){
+                    pontos += pontuacao
+                    resposta = true
+                }else if(pergunta === 'N'){
+                    pontos -= pontuacao
+                    resposta = true
+                }else{
+                    alert('Opção invalida, tente novamente')
+                }
+            }
+            alert(`Agora você tem ${pontos} pontos`)
+            perguntas ++
+        }
+        function filtraPontos(perg1, perg2, media, pontuacao){
+            if(pontos >= media){
+                pergunta(perg1, pontuacao)
+            }else{
+                pergunta(perg2, pontuacao)
+            }
+        }
+        for(var i = 0; i > pontos.length; )
+
+    
+
+      /*   titulo('RESILIA GAME')
+        pergunta('Você trabalhou o dia inteiro e está exaustx. Vai participar da aula?' , 100)
+
+          filtraPontos('O SEU GRUPO DO DIA SÓ TEM PESSOAS QUE VOCÊ NÃO TEM MUITA AFINIDADE. REALIZAR TODAS AS  ATIVIDADES PROPOSTAS?' , 'O SEU GRUPO DO DIA SÓ TEM PESSOAS QUE VOCÊ NÃO TEM MUITA AFINIDADE. REALIZAR TODAS AS  ATIVIDADES PROPOSTAS?' , media, 50)
+   */
+        
+    </script>
+</body>
+</html>
