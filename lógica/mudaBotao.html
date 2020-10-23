@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+    <style>
+        body{
+            background: black
+
+        }
+        .container{
+            width: 550px;
+            height: auto;
+            font-size: 35px;
+            text-transform: uppercase;
+            border: 15px solid black;
+            text-align: center;
+            background: black;
+            color: #ffb200;
+            margin: 5px auto;
+
+        }
+        .texto{
+            height: 120px;
+            margin: 0px 0;
+            text-align: center;
+            padding-top: 50px;
+            box-sizing: border-box;
+        }
+        
+        img{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+   
+
+    <script>
+        var body = document.querySelector('body')
+        /* Criando o container */
+        var container = document.createElement('div')
+        container.innerText = " "
+        body.appendChild(container)
+        container.classList.add('container')
+
+        /* criando Texto */
+        var texto = document.createElement('p')
+    
+        texto.innerText = 'Não entre, ele ta bravo'
+        container.appendChild(texto)
+        texto.classList.add('texto')
+
+        /* Criando img */
+        var img = document.createElement('div')
+        img.innerHTML = ` <img src="img/pikachu_1.png" alt="">`
+        container.appendChild(img)
+        img.classList.add('img')
+
+        texto.addEventListener( 'click', function(){
+            texto.innerText ='DEU RUIM!'
+            img.innerHTML = ` <img src="img/pikachu_3.png" alt="">`
+        })
+         texto.addEventListener('mouseenter', function(){
+             texto.innerText = "NÃO CLICA!"
+             img.innerHTML = ` <img src="img/pikachu_2.png" alt="">`
+         })
+         texto.addEventListener('mouseout', function(){
+             texto.innerText = "Não entre, ele ta bravo"
+             img.innerHTML = `<img src="img/pikachu_1.png" alt="">`
+         })
+    </script>
+</body>
+</html>
